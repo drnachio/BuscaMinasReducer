@@ -39,7 +39,6 @@
    ],
     "no-unused-vars": "off",
     "no-plusplus": "off",
-    "react/no-unescaped-entities": "off",
     "no-underscore-dangle": "off",
     "@typescript-eslint/no-misused-promises": [
       "error",
