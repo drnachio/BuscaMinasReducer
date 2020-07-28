@@ -1,28 +1,28 @@
-/* eslint-disable  @typescript-eslint/no-explicit-any */
-/* eslint-disable  class-methods-use-this */
-import Document, { DocumentContext, Html, Head, Main, NextScript } from 'a2r/document';
-import { ServerStyleSheet } from 'a2r/styled-components';
-import React, { Fragment } from 'a2r/react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from 'react';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
-export default class MyDocument extends Document {
-  public static async getInitialProps(ctx: DocumentContext): Promise<any> {
+class MyDocument extends Document {
+  public static async getInitialProps(ctx): Promise<any> {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = (): any =>
         originalRenderPage({
-          enhanceApp: App => (props): any => sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App) => (props): React.ReactElement =>
+            sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
         styles: (
-          <Fragment>
+          <>
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </Fragment>
+          </>
         ),
       };
     } finally {
@@ -45,3 +45,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default MyDocument;

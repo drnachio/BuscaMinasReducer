@@ -1,5 +1,7 @@
-import React from 'a2r/react';
-import * as model from 'a2r/model';
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import React from 'react';
+import * as model from '../model/game';
 
 interface CellProps {
   style: React.CSSProperties;

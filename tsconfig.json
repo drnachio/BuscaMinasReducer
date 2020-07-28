@@ -1,32 +1,45 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "allowJs": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
+    "target": "esnext",
+    "module": "esnext",
     "jsx": "preserve",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
     "lib": [
       "dom",
-      "dom.iterable",
-      "esnext"
+      "es2015",
+      "es2016"
     ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": false,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
     "strict": false,
-    "target": "es5"
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
   "exclude": [
-    "api",
-    "node_modules"
+    "node_modules",
+    "test/**/*.ts",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx"
   ],
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
     "next-env.d.ts",
-    "node_modules/a2r/api"
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }

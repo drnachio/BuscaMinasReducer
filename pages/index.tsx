@@ -1,6 +1,6 @@
-import React from 'a2r/react';
-import Head from 'a2r/head';
-import Link from 'a2r/link';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
 const Index =  (): JSX.Element => (
   <React.Fragment>

@@ -1,4 +1,4 @@
-import * as model from 'a2r/model';
+import * as model from '../model/game';
 import settings from '../config/settings';
 
 export const getNextCells = (cell: model.Cell, board: model.Board): model.Cell[] => {

@@ -1,5 +1,7 @@
 {
   "cSpell.words": [
-    "Buscaminas"
-  ]
+    "Buscaminas",
+    "esnext"
+  ],
+  "git.ignoreLimitWarning": true
 }

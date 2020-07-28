@@ -1,5 +1,5 @@
-import React, { useReducer, useEffect } from 'a2r/react';
-import { useWindowSize } from 'a2r/hooks';
+import React, { useReducer, useEffect } from 'react';
+import useWindowSize from '../hooks/useWindowSize';
 import gameReducer from '../logic/gameReducer';
 import { getNewGame } from '../logic/gameFunctions';
 import settings from '../config/settings';
@@ -41,15 +41,15 @@ const Board = (): JSX.Element => {
   return (
     <React.Fragment>    
       &nbsp;/&nbsp;
-      <button type="button" className="reset" onClick={(): void => dispatch({type: 'reset'}) }>
+      <button type="button" className="reset" onClick={(): void => dispatch({type: 'reset'})}>
         Reiniciar
       </button>
       &nbsp;/&nbsp;
-      <button type="button" className="reset" onClick={(): void => dispatch({type: 'undo'}) }>
+      <button type="button" className="reset" onClick={(): void => dispatch({type: 'undo'})}>
         Deshacer
       </button>
       &nbsp;/&nbsp;
-      <button type="button" className="reset" onClick={(): void => dispatch({type: 'redo'}) }>
+      <button type="button" className="reset" onClick={(): void => dispatch({type: 'redo'})}>
         Rehacer
       </button>
       <div style={style}>{cells.map(drawCell)}</div>

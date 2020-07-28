@@ -1,4 +1,4 @@
-import * as model from 'a2r/model';
+import * as model from '../model/game';
 import { createNewBoard, openCell } from './gameFunctions';
 import settings from '../config/settings';
 
@@ -29,7 +29,6 @@ const gameReducer = (game: model.Game, action: model.GameActions): model.Game =>
     }
     case 'redo': {      
       if (redo.length) {
-        console.log(redo.length);
         const nextStep = redo.pop();
         undo.push(game);
         return nextStep;
