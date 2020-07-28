@@ -1,3 +1,3 @@
 # Tutorial Buscaminas
 
-Ver [demo site](hhttps://busca-minas-reducer-git-completed.drnachio.vercel.app/)
+Ver [demo site](https://busca-minas-reducer-git-completed.drnachio.vercel.app/)
